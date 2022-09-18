@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <ProjectGuid>67688cd7-bbd7-4514-83d4-c4634a15260a</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
+    <DockerServiceName>catalog.api</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="docker-compose.yml" />
+    <None Include=".dockerignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="launchSettings.json">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
