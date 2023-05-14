@@ -9,9 +9,9 @@
         {
         }
 
-        public ShoppingCart(string userName)
+        public ShoppingCart(string username)
         {
-            UserName = userName;
+            UserName = username;
         }
 
         public decimal TotalPrice
